@@ -7,6 +7,7 @@
   height: calc(100vh - 64px);
   text-align: center;
   padding: 0 2rem;
+  background-color: #ffffff;
 }
 
 .hero__content {
@@ -17,8 +18,8 @@
 }
 
 .hero__content h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
+  font-size: clamp(5rem, 5vw, 3.5rem);
+  font-weight: 300;
   margin: 0;
   color: #213547;
   text-transform: lowercase;
@@ -40,35 +41,30 @@
   justify-content: center;
 }
 
-/* Scroll arrow */
-.hero__scroll-arrow {
+/* Scroll dot */
+.hero__scroll-dot {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  background: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--nfs-green), var(--nfs-blue));
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  color: rgba(33, 53, 71, 0.45);
-  transition: color 0.2s;
+  padding: 0;
+  transition: transform 0.2s, filter 0.2s;
   animation: bounce 2s ease-in-out infinite;
 }
 
-.hero__scroll-arrow:hover {
-  color: #213547;
-  border-color: transparent;
+.hero__scroll-dot:hover {
+  filter: brightness(0.85);
 }
 
-.hero__scroll-arrow:focus,
-.hero__scroll-arrow:focus-visible {
+.hero__scroll-dot:focus,
+.hero__scroll-dot:focus-visible {
   outline: none;
-}
-
-.hero__scroll-arrow svg {
-  width: 2rem;
-  height: 2rem;
-  display: block;
 }
 
 @keyframes bounce {
@@ -80,8 +76,8 @@
   }
 }
 
-/* Mobile: stack buttons */
-@media (max-width: 480px) {
+/* Small (--bp-small: 400px) */
+@media (max-width: 400px) {
   .hero__buttons {
     flex-direction: column;
     align-items: stretch;

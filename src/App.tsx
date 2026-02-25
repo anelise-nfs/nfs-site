@@ -2,6 +2,7 @@ import './App.css'
 import Nav from './components/nav'
 import Hero from './components/hero'
 import About from './screens/about'
+import Services from './screens/services'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <About />
         </section>
         <section id="services">
-          <h1>Services</h1>
+          <Services />
         </section>
         <section id="work">
           <h1>Work</h1>

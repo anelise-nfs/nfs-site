@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../assets/css/nav.css'
+import nfsLogo from '../assets/graphics/NFS-logo-1.svg'
 
 const NAV_LINKS = [
   { href: '#',        label: 'Home' },
@@ -65,7 +66,9 @@ function Nav() {
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">SiteLogo</div>
+      <div className="navbar__logo">
+        <img src={nfsLogo} alt="NFS" />
+      </div>
 
       <ul className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
         {NAV_LINKS.map(({ href, label }) => (

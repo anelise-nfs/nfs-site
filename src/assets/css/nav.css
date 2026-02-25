@@ -11,11 +11,10 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.navbar__logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #213547;
-  letter-spacing: 0.05em;
+.navbar__logo img {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 .navbar__links {
@@ -42,8 +41,8 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background-color: #213547;
+  height: 1.6px;
+  background: linear-gradient(135deg, var(--nfs-green), var(--nfs-blue));
   transition: width 0.2s ease;
 }
 
@@ -82,7 +81,7 @@
   transition: transform 0.25s, opacity 0.25s;
 }
 
-/* Mobile */
+/* Medium (--bp-medium: 700px) */
 @media (max-width: 700px) {
   .navbar__hamburger {
     display: flex;

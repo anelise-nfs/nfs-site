@@ -1,0 +1,57 @@
+.four-square {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.four-square__card {
+  aspect-ratio: 1 / 1;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.25rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.four-square__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.four-square__icon svg {
+  width: clamp(20px, 12cqi, 40px);
+  height: clamp(20px, 12cqi, 40px);
+}
+
+.four-square__title {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(0.85rem, 6.5cqi, 1.4rem);
+}
+
+.four-square__text {
+  margin: 0;
+  font-size: clamp(0.75rem, 5.5cqi, 1.1rem);
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Component-specific: 4 → 2 columns (980px) */
+@media (max-width: 980px) {
+  .four-square {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small (--bp-small: 400px) */
+@media (max-width: 400px) {
+  .four-square {
+    grid-template-columns: 1fr;
+  }
+}

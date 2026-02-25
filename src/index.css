@@ -5,12 +5,21 @@
 
   color-scheme: light;
   color: #213547;
-  background-color: #ffffff;
+  background-color: #F6F6F6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Breakpoints (reference only)
+    --bp-medium: 700px
+    --bp-small:  400px  */
+
+  /* Brand colors */
+  --nfs-green: #0ac993;
+  --nfs-blue: #0a9fc1;
+  --nfs-dark-blue: #038dab;
 }
 
 a {
@@ -20,6 +29,10 @@ a {
 }
 a:hover {
   color: #747bff;
+}
+
+html {
+  scroll-padding-top: 80px; /* 64px nav + 16px breathing room */
 }
 
 body {

@@ -32,7 +32,7 @@
   min-width: 0;
 }
 
-/* Mobile: always stack image on top, text below */
+/* Medium (--bp-medium: 700px) */
 @media (max-width: 700px) {
   .image-text--image-left,
   .image-text--image-right {
