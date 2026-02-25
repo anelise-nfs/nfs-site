@@ -3,6 +3,9 @@ import Nav from './components/nav'
 import Hero from './components/hero'
 import About from './screens/about'
 import Services from './screens/services'
+import Work from './screens/work'
+import Contact from './screens/contact'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -17,12 +20,13 @@ function App() {
           <Services />
         </section>
         <section id="work">
-          <h1>Work</h1>
+          <Work />
         </section>
         <section id="contact">
-          <h1>Contact</h1>
+          <Contact />
         </section>
       </main>
+      <Footer />
     </>
   )
 }

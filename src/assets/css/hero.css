@@ -19,18 +19,18 @@
 
 .hero__content h1 {
   font-size: clamp(5rem, 5vw, 3.5rem);
-  font-weight: 300;
+  font-weight: 200;
   margin: 0;
-  color: #213547;
+  color: var(--nfs-dark-grey);
   text-transform: lowercase;
   letter-spacing: 0.02em;
 }
 
 .hero__content h2 {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: 400;
+  font-size: clamp(1.8rem, 2.5vw, 1.5rem);
+  font-weight: 300;
   margin: 0 0 2rem;
-  color: rgba(33, 53, 71, 0.65);
+  color: var(--nfs-light-grey);
   letter-spacing: 0.05em;
 }
 

@@ -20,6 +20,8 @@
   --nfs-green: #0ac993;
   --nfs-blue: #0a9fc1;
   --nfs-dark-blue: #038dab;
+  --nfs-dark-grey: #213547;
+  --nfs-light-grey: rgba(33, 53, 71, 0.65);
 }
 
 a {
@@ -33,6 +35,7 @@ a:hover {
 
 html {
   scroll-padding-top: 80px; /* 64px nav + 16px breathing room */
+  scroll-behavior: smooth;
 }
 
 body {

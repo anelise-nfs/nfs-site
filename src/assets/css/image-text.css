@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   gap: 3rem;
+  margin: 5rem 0;
 }
 
 /* Image left, text right */

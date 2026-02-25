@@ -1,12 +1,15 @@
+import '../assets/css/services.css'
 import ImageText from '../components/image-text'
 
-function About() {
+function Services () {
   return (
-    <div className="about">
-      <h1>Services</h1>
-      <p className="about__bio">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
+    <div className="services">
+      <div className="services-intro">
+        <h1>Services</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
       <ImageText
         variant="image-right"
         imageSrc="https://placehold.co/600x400"
@@ -65,4 +68,4 @@ function About() {
   )
 }
 
-export default About
+export default Services
