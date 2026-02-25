@@ -1,0 +1,95 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 64px);
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero__content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin: 0;
+  color: #213547;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.hero__content h2 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  margin: 0 0 2rem;
+  color: rgba(33, 53, 71, 0.65);
+  letter-spacing: 0.05em;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Scroll arrow */
+.hero__scroll-arrow {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: rgba(33, 53, 71, 0.45);
+  transition: color 0.2s;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.hero__scroll-arrow:hover {
+  color: #213547;
+  border-color: transparent;
+}
+
+.hero__scroll-arrow:focus,
+.hero__scroll-arrow:focus-visible {
+  outline: none;
+}
+
+.hero__scroll-arrow svg {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+/* Mobile: stack buttons */
+@media (max-width: 480px) {
+  .hero__buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero__buttons .btn {
+    text-align: center;
+  }
+}
