@@ -14,6 +14,9 @@ function Services () {
         variant="image-right"
         imageSrc="https://placehold.co/600x400"
         imageAlt="Placeholder image"
+        buttonLabel="Learn More"
+        buttonHref="#"
+        buttonAlign="left"
       >
         <h2>Section Heading</h2>
         <p>
@@ -32,6 +35,9 @@ function Services () {
         variant="image-left"
         imageSrc="https://placehold.co/600x400"
         imageAlt="Placeholder image"
+        buttonLabel="Learn More"
+        buttonHref="#"
+        buttonAlign="left"
       >
         <h2>Section Heading</h2>
         <p>
@@ -50,6 +56,9 @@ function Services () {
         variant="image-right"
         imageSrc="https://placehold.co/600x400"
         imageAlt="Placeholder image"
+        buttonLabel="Learn More"
+        buttonHref="#"
+        buttonAlign="left"
       >
         <h2>Section Heading</h2>
         <p>

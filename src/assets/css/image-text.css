@@ -33,6 +33,19 @@
   min-width: 0;
 }
 
+.image-text__button {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.image-text__button--left {
+  justify-content: flex-start;
+}
+
+.image-text__button--right {
+  justify-content: flex-end;
+}
+
 /* Medium (--bp-medium: 700px) */
 @media (max-width: 700px) {
   .image-text--image-left,
