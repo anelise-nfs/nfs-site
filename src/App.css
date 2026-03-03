@@ -5,3 +5,55 @@
 .site-content section {
   margin-top: 6rem;
 }
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--nfs-green), var(--nfs-blue));
+  z-index: 2000;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* Custom cursor — force none across all elements, restore text for inputs */
+*, *::before, *::after {
+  cursor: none !important;
+}
+
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--nfs-green), var(--nfs-blue));
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease, opacity 0.2s ease;
+}
+
+.custom-cursor--hover {
+  width: 38px;
+  height: 38px;
+  margin-left: -19px;
+  margin-top: -19px;
+  opacity: 0.3;
+}
+
+@media (hover: none) {
+  *, *::before, *::after { cursor: auto !important; }
+  input, textarea, select { cursor: text !important; }
+  .custom-cursor { display: none; }
+}

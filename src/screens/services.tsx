@@ -1,10 +1,16 @@
 import '../assets/css/services.css'
 import ImageText from '../components/image-text'
+import { useReveal } from '../hooks/useReveal'
 
 function Services () {
+  const { ref, visible } = useReveal()
+
   return (
     <div className="services">
-      <div className="services-intro">
+      <div
+        ref={ref}
+        className={`services-intro${visible ? ' services-intro--visible' : ''}`}
+      >
         <h1>Services</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

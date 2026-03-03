@@ -15,22 +15,40 @@ type ImageTextProps = {
 function ImageText({ variant, imageSrc, imageAlt, children, buttonLabel, buttonHref, buttonAlign = 'left' }: ImageTextProps) {
   const ref = useRef<HTMLDivElement>(null)
 
+  const obsRef = useRef<IntersectionObserver | null>(null)
+
   useEffect(() => {
     const el = ref.current
     if (!el) return
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('is-visible')
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.1 }
-    )
+    const observe = () => {
+      obsRef.current?.disconnect()
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            el.classList.add('is-visible')
+            obs.disconnect()
+            obsRef.current = null
+          }
+        },
+        { threshold: 0.1 }
+      )
+      obs.observe(el)
+      obsRef.current = obs
+    }
 
-    observer.observe(el)
-    return () => observer.disconnect()
+    observe()
+
+    const handleReset = () => {
+      el.classList.remove('is-visible')
+      observe()
+    }
+
+    window.addEventListener('nfs:reset-animations', handleReset)
+    return () => {
+      obsRef.current?.disconnect()
+      window.removeEventListener('nfs:reset-animations', handleReset)
+    }
   }, [])
 
   return (

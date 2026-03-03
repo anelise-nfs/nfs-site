@@ -3,11 +3,11 @@ import '../assets/css/nav.css'
 import nfsLogo from '../assets/graphics/NFS-logo-1.svg'
 
 const NAV_LINKS = [
-  { href: '#',        label: 'Home' },
-  { href: '#about',   label: 'About' },
-  { href: '#services',label: 'Services' },
-  { href: '#work',    label: 'Work' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#',         label: 'Home' },
+  { href: '#about',    label: 'About' },
+  { href: '#services', label: 'Services' },
+  { href: '#work',     label: 'Work' },
+  { href: '#contact',  label: 'Contact' },
 ]
 
 const SECTION_IDS = ['about', 'services', 'work', 'contact']

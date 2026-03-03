@@ -1,11 +1,17 @@
 import '../assets/css/about.css'
 import ImageText from '../components/image-text'
 import FourSquareInfo from '../components/four-square-info'
+import { useReveal } from '../hooks/useReveal'
 
 function About() {
+  const { ref, visible } = useReveal()
+
   return (
     <div className="about">
-      <div className="about-intro">
+      <div
+        ref={ref}
+        className={`about-intro${visible ? ' about-intro--visible' : ''}`}
+      >
         <h1>About Us</h1>
         <p className="about__bio">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

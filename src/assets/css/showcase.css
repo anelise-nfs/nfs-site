@@ -24,7 +24,7 @@
   margin: 0 auto;
 }
 
-/* Card */
+/* Card — staggered entrance */
 
 .showcase__card {
   display: flex;
@@ -34,12 +34,24 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-  transition: transform 0.2s, box-shadow 0.2s;
+  opacity: 0;
+  transform: translateY(24px);
 }
 
+/* When grid is visible, transition each card in with staggered delay */
+.showcase__grid--visible .showcase__card {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.5s ease calc(var(--card-index, 0) * 70ms),
+    transform 0.5s ease calc(var(--card-index, 0) * 70ms);
+}
+
+/* Hover — override delay so it feels instant */
 .showcase__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .showcase__card-image {
