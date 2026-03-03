@@ -35,3 +35,29 @@
   border-color: transparent;
   transform: scale(1.04);
 }
+
+.btn--toggle {
+  background: none;
+  border: none;
+  color: #213547;
+}
+
+.btn--toggle:focus {
+  outline: none;
+}
+
+.btn--toggle:hover {
+  color: var(--nfs-blue);
+  transform: scale(1.04);
+}
+
+.btn--toggle.btn--active {
+  background: linear-gradient(135deg, var(--nfs-green), var(--nfs-blue));
+  color: #ffffff;
+}
+
+.btn--toggle.btn--active:hover {
+  background: var(--nfs-dark-blue);
+  color: #ffffff;
+  transform: scale(1.04);
+}

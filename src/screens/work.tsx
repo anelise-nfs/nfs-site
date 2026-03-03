@@ -1,4 +1,5 @@
 import '../assets/css/work.css'
+import Showcase from '../components/showcase'
 
 function Work() {
   return (
@@ -12,6 +13,7 @@ function Work() {
           commodo consequat.
         </p>
       </div>
+      <Showcase />
     </div>
   )
 }
