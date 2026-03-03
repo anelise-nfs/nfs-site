@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import '../assets/css/image-text.css'
 import Button from './button'
 
@@ -12,8 +13,28 @@ type ImageTextProps = {
 }
 
 function ImageText({ variant, imageSrc, imageAlt, children, buttonLabel, buttonHref, buttonAlign = 'left' }: ImageTextProps) {
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add('is-visible')
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <div className={`image-text image-text--${variant}`}>
+    <div ref={ref} className={`image-text image-text--${variant}`}>
       <div className="image-text__image">
         <img src={imageSrc} alt={imageAlt} />
       </div>

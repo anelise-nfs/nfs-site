@@ -46,6 +46,40 @@
   justify-content: flex-end;
 }
 
+/* Scroll entrance — initial hidden state */
+@media (prefers-reduced-motion: no-preference) {
+  .image-text__image,
+  .image-text__content {
+    opacity: 0;
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+
+  .image-text--image-left .image-text__image {
+    transform: translateX(-6rem);
+  }
+
+  .image-text--image-left .image-text__content {
+    transform: translateX(6rem);
+    transition-delay: 0.18s;
+  }
+
+  .image-text--image-right .image-text__image {
+    transform: translateX(6rem);
+  }
+
+  .image-text--image-right .image-text__content {
+    transform: translateX(-6rem);
+    transition-delay: 0.18s;
+  }
+
+  /* Triggered by IntersectionObserver */
+  .image-text.is-visible .image-text__image,
+  .image-text.is-visible .image-text__content {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Medium (--bp-medium: 700px) */
 @media (max-width: 700px) {
   .image-text--image-left,
