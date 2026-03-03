@@ -249,7 +249,14 @@
   transform: none;
 }
 
-/* Error message */
+/* Submit network error */
+.contact-form__submit-error {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #e53e3e;
+}
+
+/* Field validation error message */
 .contact-form__error {
   font-size: 0.78rem;
   color: #e53e3e;

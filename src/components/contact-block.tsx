@@ -18,6 +18,7 @@ function ContactBlock() {
     name: false, email: false, message: false,
   })
   const [submitted, setSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
 
   const validate = (key: keyof FormFields, value: string): FieldStatus => {
     if (key === 'email') return emailRegex.test(value.trim()) ? 'valid' : 'invalid'
@@ -38,19 +39,23 @@ function ContactBlock() {
   const handleBlur = (key: keyof FormFields) => () =>
     setTouched(t => ({ ...t, [key]: true }))
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setTouched({ name: true, email: true, message: true })
     const allValid = (Object.keys(fields) as (keyof FormFields)[]).every(
       k => validate(k, fields[k]) === 'valid'
     )
-    if (allValid) setSubmitted(true)
-  }
-
-  const handleReset = () => {
-    setFields({ name: '', email: '', message: '' })
-    setTouched({ name: false, email: false, message: false })
-    setSubmitted(false)
+    if (!allValid) return
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ 'form-name': 'contact', ...fields }).toString(),
+      })
+      setSubmitted(true)
+    } catch {
+      setSubmitError(true)
+    }
   }
 
   const CheckIcon = ({ area = false }: { area?: boolean }) => (
@@ -117,7 +122,8 @@ function ContactBlock() {
       <div className="contact-block__right">
         <div className={`contact-form-wrapper${submitted ? ' contact-form-wrapper--submitted' : ''}`}>
 
-          <form className="contact-form" onSubmit={handleSubmit} noValidate>
+          <form className="contact-form" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} noValidate>
+            <input type="hidden" name="form-name" value="contact" />
             {(['name', 'email', 'message'] as (keyof FormFields)[]).map(key => {
               const status = getStatus(key)
               const isArea = key === 'message'
@@ -162,6 +168,9 @@ function ContactBlock() {
               )
             })}
             <Button variant="primary">send message</Button>
+            {submitError && (
+              <p className="contact-form__submit-error">Something went wrong — please try again.</p>
+            )}
           </form>
 
           <div className="contact-form__success" aria-live="polite">
@@ -172,7 +181,6 @@ function ContactBlock() {
             </div>
             <h4>Message sent!</h4>
             <p>Thanks for reaching out. We'll get back to you soon.</p>
-            <Button variant="secondary" onClick={handleReset}>send another</Button>
           </div>
 
         </div>
