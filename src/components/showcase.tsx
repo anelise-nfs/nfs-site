@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Button from './button'
 import '../assets/css/showcase.css'
 
@@ -149,6 +149,44 @@ const defaultCards: ShowcaseCardData[] = [
 
 function Showcase({ sections = defaultSections, cards = defaultCards }: ShowcaseProps) {
   const [activeSection, setActiveSection] = useState('all')
+  const gridRef = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+  const obsRef = useRef<IntersectionObserver | null>(null)
+
+  useEffect(() => {
+    const el = gridRef.current
+    if (!el) return
+
+    const observe = () => {
+      obsRef.current?.disconnect()
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setVisible(true)
+            obs.disconnect()
+            obsRef.current = null
+          }
+        },
+        { threshold: 0.1 }
+      )
+      obs.observe(el)
+      obsRef.current = obs
+    }
+
+    observe()
+
+    const handleReset = () => {
+      setVisible(false)
+      observe()
+    }
+
+    window.addEventListener('nfs:reset-animations', handleReset)
+
+    return () => {
+      obsRef.current?.disconnect()
+      window.removeEventListener('nfs:reset-animations', handleReset)
+    }
+  }, [])
 
   const filteredCards =
     activeSection === 'all'
@@ -175,9 +213,16 @@ function Showcase({ sections = defaultSections, cards = defaultCards }: Showcase
         })}
       </div>
 
-      <div className="showcase__grid">
+      <div
+        ref={gridRef}
+        className={`showcase__grid${visible ? ' showcase__grid--visible' : ''}`}
+      >
         {filteredCards.map((card, index) => (
-          <div className="showcase__card" key={index}>
+          <div
+            className="showcase__card"
+            key={`${activeSection}-${index}`}
+            style={{ '--card-index': index } as React.CSSProperties}
+          >
             <div className="showcase__card-image">
               <img src={card.image} alt={card.imageAlt} />
             </div>

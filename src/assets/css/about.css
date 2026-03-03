@@ -1,3 +1,13 @@
 .about-intro {
   text-align: center;
 }
+.about-intro {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.about-intro--visible {
+  opacity: 1;
+  transform: translateY(0);
+}

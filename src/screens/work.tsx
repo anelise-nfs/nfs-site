@@ -1,10 +1,16 @@
 import '../assets/css/work.css'
 import Showcase from '../components/showcase'
+import { useReveal } from '../hooks/useReveal'
 
 function Work() {
+  const { ref, visible } = useReveal()
+
   return (
     <div className="work">
-      <div className="work-intro">
+      <div
+        ref={ref}
+        className={`work-intro${visible ? ' work-intro--visible' : ''}`}
+      >
         <h1>Our Work</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

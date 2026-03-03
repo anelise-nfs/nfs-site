@@ -3,11 +3,11 @@ import '../assets/css/nav.css'
 import nfsLogo from '../assets/graphics/NFS-logo-1.svg'
 
 const NAV_LINKS = [
-  { href: '#',        label: 'Home' },
-  { href: '#about',   label: 'About' },
-  { href: '#services',label: 'Services' },
-  { href: '#work',    label: 'Work' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#',         label: 'Home' },
+  { href: '#about',    label: 'About' },
+  { href: '#services', label: 'Services' },
+  { href: '#work',     label: 'Work' },
+  { href: '#contact',  label: 'Contact' },
 ]
 
 const SECTION_IDS = ['about', 'services', 'work', 'contact']
@@ -66,9 +66,9 @@ function Nav() {
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">
+      <a className="navbar__logo" href="#">
         <img src={nfsLogo} alt="NFS" />
-      </div>
+      </a>
 
       <ul className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
         {NAV_LINKS.map(({ href, label }) => (
