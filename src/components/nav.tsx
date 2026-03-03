@@ -66,9 +66,9 @@ function Nav() {
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">
+      <a className="navbar__logo" href="#">
         <img src={nfsLogo} alt="NFS" />
-      </div>
+      </a>
 
       <ul className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
         {NAV_LINKS.map(({ href, label }) => (
