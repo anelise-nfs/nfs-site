@@ -150,6 +150,7 @@ const defaultCards: ShowcaseCardData[] = [
 function Showcase({ sections = defaultSections, cards = defaultCards }: ShowcaseProps) {
   const [activeSection, setActiveSection] = useState('all')
   const gridRef = useRef<HTMLDivElement>(null)
+  const tabsRef = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
   const obsRef = useRef<IntersectionObserver | null>(null)
 
@@ -188,6 +189,17 @@ function Showcase({ sections = defaultSections, cards = defaultCards }: Showcase
     }
   }, [])
 
+  useEffect(() => {
+    const container = tabsRef.current
+    if (!container) return
+    const activeBtn = container.querySelector('.btn--active') as HTMLElement | null
+    if (!activeBtn) return
+    container.scrollTo({
+      left: activeBtn.offsetLeft - (container.offsetWidth - activeBtn.offsetWidth) / 2,
+      behavior: 'smooth',
+    })
+  }, [activeSection])
+
   const filteredCards =
     activeSection === 'all'
       ? cards
@@ -197,7 +209,7 @@ function Showcase({ sections = defaultSections, cards = defaultCards }: Showcase
 
   return (
     <div className="showcase">
-      <div className="showcase__tabs">
+      <div ref={tabsRef} className="showcase__tabs">
         {allTabs.map(tab => {
           const id = tab.toLowerCase()
           return (
