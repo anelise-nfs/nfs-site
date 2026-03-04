@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import '../assets/css/contact-block.css'
 import Button from './button'
 
@@ -19,6 +19,43 @@ function ContactBlock() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [submitError, setSubmitError] = useState(false)
+
+  const blockRef = useRef<HTMLDivElement>(null)
+  const obsRef = useRef<IntersectionObserver | null>(null)
+
+  useEffect(() => {
+    const el = blockRef.current
+    if (!el) return
+
+    const observe = () => {
+      obsRef.current?.disconnect()
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            el.classList.add('is-visible')
+            obs.disconnect()
+            obsRef.current = null
+          }
+        },
+        { threshold: 0.1 }
+      )
+      obs.observe(el)
+      obsRef.current = obs
+    }
+
+    observe()
+
+    const handleReset = () => {
+      el.classList.remove('is-visible')
+      observe()
+    }
+
+    window.addEventListener('nfs:reset-animations', handleReset)
+    return () => {
+      obsRef.current?.disconnect()
+      window.removeEventListener('nfs:reset-animations', handleReset)
+    }
+  }, [])
 
   const validate = (key: keyof FormFields, value: string): FieldStatus => {
     if (key === 'email') return emailRegex.test(value.trim()) ? 'valid' : 'invalid'
@@ -80,7 +117,7 @@ function ContactBlock() {
   )
 
   return (
-    <div className="contact-block">
+    <div ref={blockRef} className="contact-block">
 
       <div className="contact-block__left">
         <h3 className="contact-block__title">Get in touch</h3>

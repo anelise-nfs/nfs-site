@@ -47,7 +47,7 @@
 }
 
 /* Scroll entrance — initial hidden state */
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) and (min-width: 401px) {
   .image-text__image,
   .image-text__content {
     opacity: 0;

@@ -61,5 +61,7 @@
 @media (max-width: 400px) {
   .four-square {
     grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 1.5rem;
   }
 }

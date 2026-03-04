@@ -1,3 +1,44 @@
+/* ===== Ants screen (≤170px) ===== */
+
+.ants-screen {
+  display: none;
+}
+
+@media (max-width: 170px) {
+  .ants-screen {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    min-height: 100vh;
+    width: 96%;
+    padding: 2rem 1rem 0 1rem;
+    text-align: center;
+    box-sizing: border-box;
+
+    .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      cursor: pointer !important;
+    }
+  }
+
+  .ants-screen h2 {
+    font-size: 1.5rem;
+    color: var(--nfs-dark-grey);
+    margin-bottom: 0;
+  }
+
+  .ants-screen iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .site-wrapper {
+    display: none;
+  }
+}
+
 .site-content {
   padding: 0 8%;
 }

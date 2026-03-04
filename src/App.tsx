@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import Button from './components/button'
 import Nav from './components/nav'
 import Hero from './components/hero'
 import About from './screens/about'
@@ -44,28 +45,43 @@ function App() {
 
   return (
     <>
-      <div
-        className={`custom-cursor${isHovering ? ' custom-cursor--hover' : ''}`}
-        style={{ left: cursor.x, top: cursor.y }}
-      />
-      <div className="scroll-progress" style={{ width: `${progress}%` }} />
-      <Nav />
-      <Hero />
-      <main className="site-content">
-        <section id="about">
-          <About />
-        </section>
-        <section id="services">
-          <Services />
-        </section>
-        <section id="work">
-          <Work />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-      </main>
-      <Footer />
+      <div className="ants-screen">
+        <h2>What is this, a website for ants?!</h2>
+        <iframe
+          src="https://giphy.com/embed/vPGq9nqmLzMty"
+          width="480"
+          height="269"
+          style={{ border: 0 }}
+          className="giphy-embed"
+          allowFullScreen
+        />
+        <Button variant="primary" href="mailto:anelise@northforksolutions.com?subject=this site is for ants">file a complaint</Button>
+      </div>
+
+      <div className="site-wrapper">
+        <div
+          className={`custom-cursor${isHovering ? ' custom-cursor--hover' : ''}`}
+          style={{ left: cursor.x, top: cursor.y }}
+        />
+        <div className="scroll-progress" style={{ width: `${progress}%` }} />
+        <Nav />
+        <Hero />
+        <main className="site-content">
+          <section id="about">
+            <About />
+          </section>
+          <section id="services">
+            <Services />
+          </section>
+          <section id="work">
+            <Work />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
