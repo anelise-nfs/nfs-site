@@ -1,7 +1,5 @@
 .about-intro {
   text-align: center;
-}
-.about-intro {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.65s ease, transform 0.65s ease;

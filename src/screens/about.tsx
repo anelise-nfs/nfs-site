@@ -2,6 +2,7 @@ import '../assets/css/about.css'
 import ImageText from '../components/image-text'
 import FourSquareInfo from '../components/four-square-info'
 import { useReveal } from '../hooks/useReveal'
+import { CodeBracketIcon, SwatchIcon, ArrowTrendingUpIcon, SparklesIcon } from '@heroicons/react/24/outline'
 
 function About() {
   const { ref, visible } = useReveal()
@@ -41,47 +42,23 @@ function About() {
       <FourSquareInfo
         items={[
           {
-            icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="16" />
-                <line x1="8" y1="12" x2="16" y2="12" />
-              </svg>
-            ),
-            title: 'Card Title One',
+            icon: <CodeBracketIcon />,
+            title: 'Development',
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
           },
           {
-            icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="16" />
-                <line x1="8" y1="12" x2="16" y2="12" />
-              </svg>
-            ),
-            title: 'Card Title Two',
+            icon: <SwatchIcon />,
+            title: 'Design',
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
           },
           {
-            icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="16" />
-                <line x1="8" y1="12" x2="16" y2="12" />
-              </svg>
-            ),
-            title: 'Card Title Three',
+            icon: <ArrowTrendingUpIcon />,
+            title: 'Marketing',
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
           },
           {
-            icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="16" />
-                <line x1="8" y1="12" x2="16" y2="12" />
-              </svg>
-            ),
-            title: 'Card Title Four',
+            icon: <SparklesIcon />,
+            title: 'Brand Strategy',
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
           },
         ]}

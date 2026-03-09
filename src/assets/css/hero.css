@@ -18,7 +18,7 @@
 }
 
 .hero__content h1 {
-  font-size: clamp(5rem, 5vw, 3.5rem);
+  font-size: clamp(4rem, 5vw, 3.5rem);
   font-weight: 200;
   margin: 0;
   color: var(--nfs-dark-grey);
@@ -28,6 +28,7 @@
 
 /* Typewriter tagline */
 .hero__tagline {
+  font-family: 'Urbanist', system-ui, Avenir, Helvetica, Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
