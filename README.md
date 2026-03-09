@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# North Fork Solutions Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Single-page marketing website for North Fork Solutions, built with React + TypeScript + Vite and deployed on Netlify.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** — component-based UI
+- **TypeScript** — type-safe throughout
+- **Vite** — dev server and build tooling
+- **Vanilla CSS** — per-component CSS files, no UI library
+- **Heroicons** — SVG icon set (`@heroicons/react`)
+- **Netlify** — hosting + contact form handling (via `data-netlify`)
 
-## React Compiler
+## Fonts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Playfair Display** — headings
+- **Urbanist** — body and UI text
 
-## Expanding the ESLint configuration
+Both loaded via Google Fonts.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── assets/
+│   ├── css/          # Per-component and per-screen CSS files
+│   └── graphics/     # SVGs and images
+├── components/       # Reusable UI components (Nav, Hero, Button, etc.)
+├── hooks/            # Custom React hooks (useReveal)
+├── screens/          # Page sections (About, Services, Work, Contact)
+├── App.tsx           # Root — scroll progress bar, custom cursor, layout
+└── index.css         # Global styles and CSS custom properties (brand tokens)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Brand Tokens (CSS custom properties)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Defined in `src/index.css`:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Variable           | Value                    |
+| ------------------ | ------------------------ |
+| `--nfs-green`      | `#0ac993`                |
+| `--nfs-blue`       | `#0a9fc1`                |
+| `--nfs-dark-blue`  | `#038dab`                |
+| `--nfs-dark-grey`  | `#213547`                |
+| `--nfs-light-grey` | `rgba(33, 53, 71, 0.65)` |
+
+## Dev
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
 ```
