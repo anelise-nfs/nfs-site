@@ -13,10 +13,13 @@ function Services () {
       >
         <h1>Expertise</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          North Fork Solutions offers comprehensive digital services designed to help businesses grow. From brand strategy to web development, from marketing plans to choosing the right systems and software, expert knowledge is available at every stage of the journey.
         </p>
         <p>
-        Looking to build something big? Don't worry, it's not just me behind the scenes. I have a large network of talented designers, back-end developers, and industry experts that can help deliver your dreams to reality.
+          My approach to every project is collaborative and transparent, enhanced by intelligent automation that accelerates delivery without sacrificing quality. AI is leveraged strategically — not as a shortcut, but as a powerful tool guided by expertise and precision. Through thoughtful prompts and a deep understanding of the logic behind each request, North Fork Solutions delivers custom-crafted solutions, not generic templates. This creates efficiency that benefits clients through faster timelines and exceptional outcomes.
+        </p>
+        <p>
+          Looking to build something big? Don't worry, it's not just me behind the scenes. I have a large network of talented designers, back-end developers, and industry experts that can help deliver your dreams to reality.
         </p>
       </div>
       <ImageText
