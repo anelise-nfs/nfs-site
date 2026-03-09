@@ -11,9 +11,12 @@ function Services () {
         ref={ref}
         className={`services-intro${visible ? ' services-intro--visible' : ''}`}
       >
-        <h1>Services</h1>
+        <h1>Expertise</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+        Looking to build something big? Don't worry, it's not just me behind the scenes. I have a large network of talented designers, back-end developers, and industry experts that can help deliver your dreams to reality.
         </p>
       </div>
       <ImageText

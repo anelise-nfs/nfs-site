@@ -1,11 +1,12 @@
 import '../assets/css/about.css'
 import ImageText from '../components/image-text'
 import FourSquareInfo from '../components/four-square-info'
+import Button from '../components/button'
 import { useReveal } from '../hooks/useReveal'
-import { CodeBracketIcon, SwatchIcon, ArrowTrendingUpIcon, SparklesIcon } from '@heroicons/react/24/outline'
+import { CodeBracketIcon, SwatchIcon, ArrowTrendingUpIcon, CircleStackIcon } from '@heroicons/react/24/outline'
 
 function About() {
-  const { ref, visible } = useReveal()
+  const { ref, visible } = useReveal(0.5)
 
   return (
     <div className="about">
@@ -13,30 +14,21 @@ function About() {
         ref={ref}
         className={`about-intro${visible ? ' about-intro--visible' : ''}`}
       >
-        <h1>About Us</h1>
-        <p className="about__bio">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+        <h3 className="about__bio">
+        Exceptional digital experiences don't happen by accident—they're the result of strategy, design, and development working in harmony. North Fork Solutions delivers integrated solutions where strategic thinking, creative design, and modern technology converge to drive real business results.
+        </h3>
       </div>
       <ImageText
         variant="image-right"
         imageSrc="https://placehold.co/600x400"
         imageAlt="Placeholder image"
-        buttonLabel="Learn More"
-        buttonHref="#"
-        buttonAlign="left"
       >
-        <h2>Section Heading</h2>
+        <h2>About Us</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+        Hi, I'm Anelise, the creative and technical force behind North Fork Solutions. As a front-end web developer with over 15 years of experience in marketing and design, my specialty is visual transformations that improve user experience and drive value. With a deep understanding of design and user experience and four years of experience in front-end web development, I bridge the gap between strategic thinking, visual design, and technical execution.
         </p>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Whether it's launching a brand new company, refreshing a brand, or collaborating with a large dev team, I bring the expertise to transform your vision into reality and guide projects from concept to completion.
         </p>
       </ImageText>
       <FourSquareInfo
@@ -44,25 +36,28 @@ function About() {
           {
             icon: <CodeBracketIcon />,
             title: 'Development',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+            text: 'Modern, responsive websites built with UX at heart. Thoughtful design meets technical excellence.',
           },
           {
             icon: <SwatchIcon />,
             title: 'Design',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+            text: 'Digital experiences crafted with purpose and precision. Beautiful, functional solutions that resonate.',
           },
           {
             icon: <ArrowTrendingUpIcon />,
-            title: 'Marketing',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+            title: 'Brand Strategy',
+            text: 'Positioning developed with clarity and intention. Strategic direction that differentiates and drives value.',
           },
           {
-            icon: <SparklesIcon />,
-            title: 'Brand Strategy',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+            icon: <CircleStackIcon />,
+            title: 'Intelligent Automation',
+            text: 'AI solutions implemented with purpose and expertise. Thoughtful automation that elevates performance and efficiency.',
           },
         ]}
       />
+      <div className="about__cta">
+        <Button variant="primary" href="#contact">Schedule a Call</Button>
+      </div>
     </div>
   )
 }

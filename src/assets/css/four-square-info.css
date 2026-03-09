@@ -34,8 +34,8 @@
 }
 
 .four-square__icon svg {
-  width: clamp(34px, 12cqi, 40px);
-  height: clamp(34px, 12cqi, 40px);
+  width: clamp(30px, 12cqi, 40px);
+  height: clamp(30px, 12cqi, 40px);
 }
 
 .four-square__title {
