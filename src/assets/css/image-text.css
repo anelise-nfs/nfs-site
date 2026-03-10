@@ -16,8 +16,9 @@
 }
 
 .image-text__image {
-  flex: 1;
+  flex: 5;
   min-width: 0;
+  aspect-ratio: 5 / 4;
 }
 
 .image-text__image img {
@@ -29,7 +30,7 @@
 }
 
 .image-text__content {
-  flex: 1;
+  flex: 6;
   min-width: 0;
 }
 
