@@ -40,6 +40,9 @@
 
 .site-content {
   padding: 0 8%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .site-content section {

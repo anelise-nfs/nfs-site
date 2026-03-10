@@ -1,8 +1,8 @@
 .image-text {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 3rem;
-  margin: 5rem 0;
+  margin: 6.2rem 0;
 }
 
 /* Image left, text right */
@@ -16,7 +16,7 @@
 }
 
 .image-text__image {
-  flex: 5;
+  flex: 1;
   min-width: 0;
   aspect-ratio: 5 / 4;
 }
@@ -30,8 +30,12 @@
 }
 
 .image-text__content {
-  flex: 6;
+  flex: 1;
   min-width: 0;
+
+  h2 {
+    margin-top: -0.4rem;
+  }
 }
 
 .image-text__content ul {

@@ -122,9 +122,7 @@ function ContactBlock() {
       <div className="contact-block__left">
         <h3 className="contact-block__title">Get in touch</h3>
         <p className="contact-block__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Reach out and we'll
-          get back to you as soon as possible.
+          I'd love to hear about your upcoming projects and see how I can help. Whether you're facing a specific challenge or just starting to think about what's next, reach out and I'll get back to you within 24 hours.
         </p>
         <div className="contact-block__cards">
 

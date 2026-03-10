@@ -11,7 +11,7 @@ function Work() {
         ref={ref}
         className={`work-intro${visible ? ' work-intro--visible' : ''}`}
       >
-        <h1>Our Work</h1>
+        <h1>Successful Projects</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
