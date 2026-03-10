@@ -11,73 +11,77 @@ function Services () {
         ref={ref}
         className={`services-intro${visible ? ' services-intro--visible' : ''}`}
       >
-        <h1>Services</h1>
+        <h1>Expertise</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          North Fork Solutions offers comprehensive digital services designed to help businesses grow. From brand strategy to web development, from marketing plans to choosing the right systems and software, expert knowledge is available at every stage of the journey.
+        </p>
+        <p>
+          My approach to every project is collaborative and transparent, enhanced by intelligent automation that accelerates delivery without sacrificing quality. AI is leveraged strategically — not as a shortcut, but as a powerful tool guided by expertise and precision. Through thoughtful prompts and a deep understanding of the logic behind each request, North Fork Solutions delivers custom-crafted solutions, not just a copy paste from an AI tool. This process creates efficiency that allows faster timelines without sacrificing the quality of the end-product.
+        </p>
+        <p>
+          Looking to build something big? Don't worry, it's not just me behind the scenes. I have a large network of talented designers, back-end developers, content creators, and many other industry experts that are ready to help deliver your dreams to reality.
         </p>
       </div>
       <ImageText
         variant="image-right"
         imageSrc="https://placehold.co/600x400"
         imageAlt="Placeholder image"
-        buttonLabel="Learn More"
-        buttonHref="#"
-        buttonAlign="left"
+        // buttonLabel="Learn More"
+        // buttonHref="#"
+        // buttonAlign="left"
       >
-        <h2>Section Heading</h2>
+        <h2>Modern Web Solutions Built to Perform</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+          Work with a developer who considers user experience and design in every decision while maintaining technical quality. No need for a pre-designed solution to start development — I can problem solve with your team, design and develop solutions, and deliver an end-product that typically needs fewer revisions before launch.
         </p>
+        <ul>
+          <li>Custom front-end development</li>
+          <li>Website improvements and maintenance</li>
+          <li>CMS implementation and optimization</li>
+        </ul>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          I love collaborating with teams of developers and I'm available to contract with your current dev team. Or if you need a team to develop your next big idea, I will happily build your dream team and manage the process from design to delivery.
         </p>
       </ImageText>
       <ImageText
         variant="image-left"
         imageSrc="https://placehold.co/600x400"
         imageAlt="Placeholder image"
-        buttonLabel="Learn More"
-        buttonHref="#"
-        buttonAlign="left"
+        // buttonLabel="Learn More"
+        // buttonHref="#"
+        // buttonAlign="left"
       >
-        <h2>Section Heading</h2>
+        <h2>Visual Identity with Purpose</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+          Creating visual systems with intention—where every color, typeface, and interface element serves a purpose. With over 15 years of experience in design and branding, I understand how to build cohesive visual identities that work across every touchpoint.
         </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <ul>
+          <li>Brand identity and logo design</li>
+          <li>UX/UI design and prototyping</li>
+          <li>Marketing collateral and content templates</li>
+          <li>Design system creation</li>
+          <li>Collaboration and consulting services for marketing teams and creative directors</li>
+        </ul>
       </ImageText>
       <ImageText
         variant="image-right"
         imageSrc="https://placehold.co/600x400"
         imageAlt="Placeholder image"
-        buttonLabel="Learn More"
-        buttonHref="#"
-        buttonAlign="left"
+        // buttonLabel="Learn More"
+        // buttonHref="#"
+        // buttonAlign="left"
       >
-        <h2>Section Heading</h2>
+        <h2>Strategic Direction That Drives Growth</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+          With expertise spanning marketing strategy, brand positioning, digital experiences, and business operations, I help organizations cut through the noise and focus on what matters. Whether you need a marketing plan, help integrating AI and automation into workflows, or tech stack organization, I turn strategic thinking into practical implementation that delivers results.
         </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <ul>
+          <li>Marketing strategy and business planning</li>
+          <li>Brand positioning/messaging</li>
+          <li>AI implementation and process automation</li>
+          <li>Marketing technology integration</li>
+          <li>Process documentation and training</li>
+        </ul>
       </ImageText>
     </div>
   )

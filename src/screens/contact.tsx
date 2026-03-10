@@ -13,7 +13,7 @@ function Contact() {
       >
         <h1>Let's Work Together</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+          Ready to transform your business? Whether it's starting from the ground up with a complete brand and website, a strategic refresh, or implementing operational systems that actually work, North Fork Solutions is here to help. Schedule a free 30-minute consultation for an honest conversation about goals, challenges, and solutions.
           </p>
       </div>
       <ContactBlock />
