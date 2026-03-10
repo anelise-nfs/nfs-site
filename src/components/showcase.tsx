@@ -28,7 +28,7 @@ const defaultSections = ['Branding', 'Web Design', 'Strategy']
 const defaultCards: ShowcaseCardData[] = [
   // Branding
   {
-    image: 'https://placehold.co/350x200/d4f5e9/0ac993?text=Branding',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Brand Identity for Acme Co.',
     title: 'Brand Identity for Acme Co.',
     description: 'A complete brand refresh including logo, color palette, and typography guidelines for a growing tech startup.',
@@ -39,7 +39,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/d4f5e9/0ac993?text=Branding',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Logo Design for Solis',
     title: 'Logo Design for Solis',
     description: "Crafting a bold and memorable logo that reflects the company's commitment to sustainable energy solutions.",
@@ -49,7 +49,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/d4f5e9/0ac993?text=Branding',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Style Guide for Northfield',
     title: 'Style Guide for Northfield',
     description: 'Developing a comprehensive visual style guide to ensure brand consistency across all digital and print touchpoints.',
@@ -60,7 +60,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/d4f5e9/0ac993?text=Branding',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Rebranding Campaign',
     title: 'Rebranding Campaign',
     description: 'Strategic rebrand for a legacy financial services firm entering a new digital-first market segment.',
@@ -68,7 +68,7 @@ const defaultCards: ShowcaseCardData[] = [
   },
   // Web Design
   {
-    image: 'https://placehold.co/350x200/d4eef5/0a9fc1?text=Web+Design',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'E-commerce Redesign',
     title: 'E-commerce Redesign',
     description: 'A complete UX overhaul for an online retailer, boosting conversions by 40% through improved navigation and checkout flow.',
@@ -79,7 +79,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/d4eef5/0a9fc1?text=Web+Design',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Portfolio Site for Ramos Studio',
     title: 'Portfolio Site for Ramos Studio',
     description: 'A minimalist, animation-rich portfolio website showcasing the photography and design work of an independent creative studio.',
@@ -89,7 +89,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/d4eef5/0a9fc1?text=Web+Design',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'SaaS Dashboard UI',
     title: 'SaaS Dashboard UI',
     description: 'Designing a clean, data-dense dashboard interface for a B2B analytics platform, focused on clarity and usability.',
@@ -100,7 +100,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/d4eef5/0a9fc1?text=Web+Design',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Restaurant Landing Page',
     title: 'Restaurant Landing Page',
     description: 'A visually compelling landing page designed to drive reservations and highlight seasonal menus for an upscale dining experience.',
@@ -108,7 +108,7 @@ const defaultCards: ShowcaseCardData[] = [
   },
   // Strategy
   {
-    image: 'https://placehold.co/350x200/fef3e2/038dab?text=Strategy',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Go-to-Market Plan',
     title: 'Go-to-Market Plan',
     description: 'Developing a full GTM strategy for a SaaS startup launching into a competitive enterprise market, including positioning and channel mix.',
@@ -118,7 +118,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/fef3e2/038dab?text=Strategy',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Content Strategy Audit',
     title: 'Content Strategy Audit',
     description: 'A comprehensive audit and rebuild of a content strategy to align with SEO goals and audience growth targets.',
@@ -129,7 +129,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/fef3e2/038dab?text=Strategy',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Digital Transformation Roadmap',
     title: 'Digital Transformation Roadmap',
     description: 'Guiding a mid-sized retail brand through a structured digital transformation, from ecommerce migration to omnichannel activation.',
@@ -139,7 +139,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: 'https://placehold.co/350x200/fef3e2/038dab?text=Strategy',
+    image: 'https://placehold.co/350x200',
     imageAlt: 'Social Media Strategy',
     title: 'Social Media Strategy',
     description: 'Building a cohesive social media strategy for a consumer goods brand, resulting in a 3x increase in organic reach within six months.',

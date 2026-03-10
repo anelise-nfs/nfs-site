@@ -20,8 +20,8 @@ function About() {
       </div>
       <ImageText
         variant="image-right"
-        imageSrc="https://placehold.co/600x400"
-        imageAlt="Placeholder image"
+        imageSrc="/images/about-headshot_600x400.jpg"
+        imageAlt="anelise headshot"
       >
         <h2>About Us</h2>
         <p>
