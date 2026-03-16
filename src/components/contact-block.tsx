@@ -127,13 +127,13 @@ function ContactBlock() {
         </p>
         <div className="contact-block__cards">
 
-          <a className="contact-card" href="tel:+15551234567">
+          <a className="contact-card" href="tel:+14352482164">
             <div className="contact-card__icon">
               <PhoneIcon />
             </div>
             <div className="contact-card__info">
               <span className="contact-card__label">Call Us</span>
-              <span className="contact-card__value">+1 (555) 123-4567</span>
+              <span className="contact-card__value">+1 (435) 248-2164</span>
             </div>
           </a>
 
