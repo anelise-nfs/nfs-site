@@ -24,7 +24,7 @@ function Services () {
       </div>
       <ImageText
         variant="image-right"
-        imageSrc="https://placehold.co/600x400"
+        imageSrc="../public/images/services-dev.jpg"
         imageAlt="Placeholder image"
         // buttonLabel="Learn More"
         // buttonHref="#"
@@ -45,7 +45,7 @@ function Services () {
       </ImageText>
       <ImageText
         variant="image-left"
-        imageSrc="https://placehold.co/600x400"
+        imageSrc="../public/images/services-design.jpg"
         imageAlt="Placeholder image"
         // buttonLabel="Learn More"
         // buttonHref="#"
@@ -65,7 +65,7 @@ function Services () {
       </ImageText>
       <ImageText
         variant="image-right"
-        imageSrc="https://placehold.co/600x400"
+        imageSrc="../public/images/services-strategy_test.jpg"
         imageAlt="Placeholder image"
         // buttonLabel="Learn More"
         // buttonHref="#"

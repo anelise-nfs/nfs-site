@@ -132,7 +132,7 @@ function ContactBlock() {
               <PhoneIcon />
             </div>
             <div className="contact-card__info">
-              <span className="contact-card__label">Call Us</span>
+              <span className="contact-card__label">Call</span>
               <span className="contact-card__value">+1 (435) 248-2164</span>
             </div>
           </a>
@@ -142,7 +142,7 @@ function ContactBlock() {
               <EnvelopeIcon />
             </div>
             <div className="contact-card__info">
-              <span className="contact-card__label">Email Us</span>
+              <span className="contact-card__label">Email</span>
               <span className="contact-card__value">hello@northforksolutions.com</span>
             </div>
           </a>
