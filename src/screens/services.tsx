@@ -45,7 +45,7 @@ function Services () {
       </ImageText>
       <ImageText
         variant="image-left"
-        imageSrc="../public/images/services-design.jpg"
+        imageSrc="../public/images/services-design_2.jpg"
         imageAlt="Placeholder image"
         // buttonLabel="Learn More"
         // buttonHref="#"
@@ -65,7 +65,7 @@ function Services () {
       </ImageText>
       <ImageText
         variant="image-right"
-        imageSrc="../public/images/services-strategy_test.jpg"
+        imageSrc="../public/images/services-strategy.jpg"
         imageAlt="Placeholder image"
         // buttonLabel="Learn More"
         // buttonHref="#"
