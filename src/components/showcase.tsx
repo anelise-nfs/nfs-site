@@ -14,7 +14,7 @@ export type ShowcaseCardData = {
   imageAlt: string
   title: string
   description: string
-  section: string
+  section: string | string[]
   links?: ShowcaseCardLink[]
 }
 
@@ -23,16 +23,16 @@ type ShowcaseProps = {
   cards?: ShowcaseCardData[]
 }
 
-const defaultSections = ['Branding', 'Web Design', 'Strategy']
+const defaultSections = ['Development', 'Design', 'Strategy']
 
 const defaultCards: ShowcaseCardData[] = [
-  // Branding
+  // Dev
   {
     image: 'https://placehold.co/350x200',
     imageAlt: 'Brand Identity for Acme Co.',
     title: 'Brand Identity for Acme Co.',
     description: 'A complete brand refresh including logo, color palette, and typography guidelines for a growing tech startup.',
-    section: 'Branding',
+    section: 'Development',
     links: [
       { label: 'View Project', href: '#', variant: 'primary' },
       { label: 'Case Study', href: '#', variant: 'secondary' },
@@ -43,7 +43,7 @@ const defaultCards: ShowcaseCardData[] = [
     imageAlt: 'Logo Design for Solis',
     title: 'Logo Design for Solis',
     description: "Crafting a bold and memorable logo that reflects the company's commitment to sustainable energy solutions.",
-    section: 'Branding',
+    section: 'Development',
     links: [
       { label: 'View Project', href: '#', variant: 'primary' },
     ],
@@ -53,7 +53,7 @@ const defaultCards: ShowcaseCardData[] = [
     imageAlt: 'Style Guide for Northfield',
     title: 'Style Guide for Northfield',
     description: 'Developing a comprehensive visual style guide to ensure brand consistency across all digital and print touchpoints.',
-    section: 'Branding',
+    section: 'Development',
     links: [
       { label: 'View Project', href: '#', variant: 'primary' },
       { label: 'Learn More', href: '#', variant: 'secondary' },
@@ -64,15 +64,15 @@ const defaultCards: ShowcaseCardData[] = [
     imageAlt: 'Rebranding Campaign',
     title: 'Rebranding Campaign',
     description: 'Strategic rebrand for a legacy financial services firm entering a new digital-first market segment.',
-    section: 'Branding',
+    section: ['Development', 'Design'],
   },
-  // Web Design
+  // Design
   {
     image: 'https://placehold.co/350x200',
     imageAlt: 'E-commerce Redesign',
     title: 'E-commerce Redesign',
     description: 'A complete UX overhaul for an online retailer, boosting conversions by 40% through improved navigation and checkout flow.',
-    section: 'Web Design',
+    section: 'Design',
     links: [
       { label: 'View Project', href: '#', variant: 'primary' },
       { label: 'Case Study', href: '#', variant: 'secondary' },
@@ -83,7 +83,7 @@ const defaultCards: ShowcaseCardData[] = [
     imageAlt: 'Portfolio Site for Ramos Studio',
     title: 'Portfolio Site for Ramos Studio',
     description: 'A minimalist, animation-rich portfolio website showcasing the photography and design work of an independent creative studio.',
-    section: 'Web Design',
+    section: 'Design',
     links: [
       { label: 'Visit Site', href: '#', variant: 'primary' },
     ],
@@ -93,7 +93,7 @@ const defaultCards: ShowcaseCardData[] = [
     imageAlt: 'SaaS Dashboard UI',
     title: 'SaaS Dashboard UI',
     description: 'Designing a clean, data-dense dashboard interface for a B2B analytics platform, focused on clarity and usability.',
-    section: 'Web Design',
+    section: 'Design',
     links: [
       { label: 'View Project', href: '#', variant: 'primary' },
       { label: 'Learn More', href: '#', variant: 'secondary' },
@@ -104,7 +104,7 @@ const defaultCards: ShowcaseCardData[] = [
     imageAlt: 'Restaurant Landing Page',
     title: 'Restaurant Landing Page',
     description: 'A visually compelling landing page designed to drive reservations and highlight seasonal menus for an upscale dining experience.',
-    section: 'Web Design',
+    section: 'Design',
   },
   // Strategy
   {
@@ -203,7 +203,11 @@ function Showcase({ sections = defaultSections, cards = defaultCards }: Showcase
   const filteredCards =
     activeSection === 'all'
       ? cards
-      : cards.filter(card => card.section.toLowerCase() === activeSection)
+      : cards.filter(card =>
+          (Array.isArray(card.section) ? card.section : [card.section]).some(
+            s => s.toLowerCase() === activeSection
+          )
+        )
 
   const allTabs = ['All', ...sections]
 
