@@ -2,6 +2,7 @@ import '../assets/css/skills.css'
 
 type SkillItem = {
   label: string
+  icon: string
 }
 
 type SkillsProps = {
@@ -9,26 +10,26 @@ type SkillsProps = {
 }
 
 const defaultItems: SkillItem[] = [
-  { label: 'Branding' },
-  { label: 'Strategy' },
-  { label: 'Development' },
-  { label: 'Design' },
-  { label: 'SEO' },
-  { label: 'Marketing' },
-  { label: 'Analytics' },
-  { label: 'Content' },
-  { label: 'Social' },
-  { label: 'Automation' },
-  { label: 'UX/UI' },
-  { label: 'CMS' },
-  { label: 'Email' },
-  { label: 'Video' },
+  { label: 'HTML', icon: '/images/skill_html.png' },
+  { label: 'CSS', icon: '/images/skill_css.png' },
+  { label: 'JavaScript', icon: '/images/skill_javascript.png' },
+  { label: 'React', icon: '/images/skill_react.png' },
+  { label: 'Tailwind', icon: '/images/skill_tailwind.png' },
+  { label: 'Vite', icon: '/images/skill_vite.png' },
+  { label: 'GitHub', icon: '/images/skill_github.png' },
+  { label: 'Figma', icon: '/images/skill_figma.png' },
+  { label: 'Claude', icon: '/images/skill_claude.png' },
+  { label: 'Illustrator', icon: '/images/skill_illustrator.png' },
+  { label: 'Photoshop', icon: '/images/skill_photoshop.png' },
+  { label: 'InDesign', icon: '/images/skill_indesign.png' },
+  { label: 'Asana', icon: '/images/skill_asana.png' },
+  { label: 'Jira', icon: '/images/skill_jira.png' },
 ]
 
 function Skills({ items = defaultItems }: SkillsProps) {
   return (
     <div className="skills">
-      <h2>Technical Skills</h2>
+      <h3>Technologies + Platforms</h3>
       <div className="skills__track">
         {[...items, ...items].map((item, index) => (
           <div
@@ -37,9 +38,7 @@ function Skills({ items = defaultItems }: SkillsProps) {
             aria-hidden={index >= items.length || undefined}
           >
             <div className="skills__icon">
-              <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="1" height="1" fill="#d0d0d0" rx="0.08" />
-              </svg>
+              <img src={item.icon} alt={item.label} />
             </div>
             <span className="skills__label">{item.label}</span>
           </div>

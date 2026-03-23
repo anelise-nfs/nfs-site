@@ -1,6 +1,10 @@
 .skills {
   overflow: hidden;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
+
+  h3 {
+    margin: 0.5rem 0 1.5rem 0;
+  }
 }
 
 .skills__track {
@@ -20,23 +24,25 @@
 }
 
 .skills__icon {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.skills__icon img,
 .skills__icon svg {
-  width: 100%;
-  height: 100%;
+  width: 54px;
+  height: 54px;
 }
 
 .skills__label {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-align: center;
-  color: var(--nfs-light-grey);
+  color: var(--nfs-dark-grey);
   white-space: nowrap;
+  margin-top: 0.3rem;
 }
 
 @keyframes skills-scroll {
