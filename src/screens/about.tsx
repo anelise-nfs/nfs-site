@@ -51,7 +51,7 @@ function About() {
           {
             icon: <CircleStackIcon />,
             title: 'Intelligent Automation',
-            text: 'AI solutions implemented with purpose. Thoughtful automation that drives performance and efficiency.',
+            text: 'AI solutions implemented with purpose. Thoughtful automation that drives performance.',
           },
         ]}
       />

@@ -1,5 +1,6 @@
 import '../assets/css/services.css'
 import ImageText from '../components/image-text'
+import Skills from '../components/skills'
 import { useReveal } from '../hooks/useReveal'
 
 function Services () {
@@ -21,6 +22,7 @@ function Services () {
         <p>
           Looking to build something big? Don't worry, it's not just me behind the scenes. I have a large network of talented designers, back-end developers, content creators, and many other industry experts that are ready to help deliver your dreams to reality.
         </p>
+        <Skills />
       </div>
       <ImageText
         variant="image-right"
