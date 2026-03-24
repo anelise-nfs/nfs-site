@@ -15,7 +15,7 @@ function About() {
         className={`about-intro${visible ? ' about-intro--visible' : ''}`}
       >
         <h3 className="about__bio">
-        Exceptional digital experiences don't happen by accident—they're the result of strategy, design, and development working in harmony. North Fork Solutions delivers integrated solutions where strategic thinking, creative design, and modern technology converge to drive real business results.
+        Exceptional digital experiences don't happen by accident — they're the result of strategy, design, and development working in harmony. North Fork Solutions delivers integrated solutions where strategic thinking, creative design, and modern technology converge to drive real business results.
         </h3>
       </div>
       <ImageText

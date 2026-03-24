@@ -147,14 +147,14 @@ const defaultCards: ShowcaseCardData[] = [
     image: '../images/projects_strategy_mtbfw.png',
     imageAlt: 'Mt. Bachelor Closing Weekend',
     title: 'Mt. Bachelor x 10 Barrel Activation',
-    description: 'A closing weekend experience in partnership with 10 Barrel and Mt. Bachelor where both mountain biking and skiing were open for an entire 3-day weekend, featuring several events and brand activations.',
+    description: 'A closing weekend experience in partnership with 10 Barrel Brewing and Mt. Bachelor where both mountain biking and skiing were open for an entire 3-day weekend, featuring several events and brand activations.',
     section: 'Strategy',
   },
   {
     image: '../images/projects_strategy_wwpc.png',
     imageAlt: 'Trail Sign + Wayfinding',
-    title: 'Trail Sign + Wayfinding',
-    description: 'Update the mountain bike trail sign and wayfinding experience at Woodward Park City to promote a progression-based trail system and improve bike experience.',
+    title: 'Trail Signs + Wayfinding',
+    description: 'Update the mountain bike trail sign and wayfinding experience at Woodward Park City to promote a progression-based trail system and improve biking experience for both beginners and advanced riders.',
     section: 'Strategy',
   },
 ]

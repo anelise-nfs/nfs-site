@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   height: calc(100vh - 64px);
+  height: calc(100dvh - 64px);
   text-align: center;
   padding: 0 2rem;
   background-color: #ffffff;
