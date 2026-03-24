@@ -1,10 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nfs-site</title>
+    <title>North Fork Solutions</title>
+    <meta
+      name="description"
+      content="Front-end developer and UX designer with over 15 years of experience specializing in custom web solutions, digital design, and marketing and brand strategy."
+    />
+    <link rel="canonical" href="https://northforksolutions.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://northforksolutions.com/" />
+    <meta property="og:title" content="North Fork Solutions" />
+    <meta
+      property="og:description"
+      content="Front-end developer and UX designer with over 15 years of experience specializing in custom web solutions, digital design, and marketing and brand strategy."
+    />
+    <meta
+      property="og:image"
+      content="https://northforksolutions.com/images/og-image.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="North Fork Solutions" />
+    <meta
+      name="twitter:description"
+      content="Front-end developer and UX designer with over 15 years of experience specializing in custom web solutions, digital design, and marketing and brand strategy."
+    />
+    <meta
+      name="twitter:image"
+      content="https://northforksolutions.com/images/og-image.png"
+    />
+
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,9 +47,9 @@
   <body>
     <!-- Hidden form for Netlify build bot detection -->
     <form name="contact" data-netlify="true" hidden>
-      <input name="name" />
-      <input name="email" />
-      <textarea name="message"></textarea>
+      <input id="name" name="name" autocomplete="name" />
+      <input id="email" name="email" autocomplete="email" />
+      <textarea id="message" name="message" autocomplete="off"></textarea>
     </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

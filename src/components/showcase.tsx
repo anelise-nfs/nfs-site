@@ -44,7 +44,7 @@ const defaultCards: ShowcaseCardData[] = [
     description: "Full stack e-commerce outdoor gear website designed and developed with a team of 5 developers. Features full auth, advanced component structures, and multi-platform styling.",
     section: 'Development',
     links: [
-      { label: 'Explore the Site', href: '#', variant: 'primary' },
+      { label: 'Explore the Site', href: 'https://everfree-outdoors.netlify.app/', variant: 'primary' },
       { label: 'GitHub Repo', href: 'https://github.com/anelisekathryn/EverFree-Outdoors', variant: 'secondary' },
     ],
   },
@@ -85,9 +85,6 @@ const defaultCards: ShowcaseCardData[] = [
     title: 'SCOTT Goggles x Snowbasin',
     description: 'Custom designed solution for a Snowbasin and SCOTT goggles partnership. Based on weather conditions, a designated goggle rec appears in the conditions report with a link to the product.',
     section: 'Design',
-    links: [
-      { label: 'Visit Site', href: '#', variant: 'primary' },
-    ],
   },
   {
     image: '../images/projects_design_aquavie.png',

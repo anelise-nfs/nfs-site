@@ -154,7 +154,7 @@ function ContactBlock() {
         <div className={`contact-form-wrapper${submitted ? ' contact-form-wrapper--submitted' : ''}`}>
 
           <form className="contact-form" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} noValidate>
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" id="form-name" name="form-name" value="contact" />
             {(['name', 'email', 'message'] as (keyof FormFields)[]).map(key => {
               const status = getStatus(key)
               const isArea = key === 'message'
@@ -170,6 +170,8 @@ function ContactBlock() {
                     {isArea ? (
                       <textarea
                         id={`contact-${key}`}
+                        name={key}
+                        autoComplete="off"
                         placeholder={`Your ${key}`}
                         value={fields[key]}
                         onChange={handleChange(key)}
@@ -178,6 +180,8 @@ function ContactBlock() {
                     ) : (
                       <input
                         id={`contact-${key}`}
+                        name={key}
+                        autoComplete={key === 'email' ? 'email' : 'name'}
                         type={key === 'email' ? 'email' : 'text'}
                         placeholder={`Your ${key}`}
                         value={fields[key]}
