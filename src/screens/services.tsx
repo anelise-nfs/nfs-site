@@ -24,7 +24,7 @@ function Services () {
       <ImageText
         variant="image-right"
         imageSrc="../images/services-dev.jpg"
-        imageAlt="Placeholder image"
+        imageAlt="Development Services"
         // buttonLabel="Learn More"
         // buttonHref="#"
         // buttonAlign="left"
@@ -45,7 +45,7 @@ function Services () {
       <ImageText
         variant="image-left"
         imageSrc="../images/services-design_2.jpg"
-        imageAlt="Placeholder image"
+        imageAlt="Design Services"
         // buttonLabel="Learn More"
         // buttonHref="#"
         // buttonAlign="left"
@@ -65,7 +65,7 @@ function Services () {
       <ImageText
         variant="image-right"
         imageSrc="../images/services-strategy.jpg"
-        imageAlt="Placeholder image"
+        imageAlt="Strategy Services"
         // buttonLabel="Learn More"
         // buttonHref="#"
         // buttonAlign="left"
