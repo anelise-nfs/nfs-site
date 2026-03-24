@@ -33,6 +33,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4 {
@@ -42,6 +43,7 @@ h1, h2, h3, h4 {
 p {
   font-family: 'Urbanist', system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1.05rem;
+  line-height: 1.65rem;
 }
 
 h1 {
@@ -49,6 +51,6 @@ h1 {
   line-height: 1.1;
 }
 
-h2 {
+h2, h3 {
   color: var(--nfs-dark-blue);
 }

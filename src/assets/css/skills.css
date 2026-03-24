@@ -1,0 +1,73 @@
+.skills {
+  overflow: hidden;
+  margin: 1rem 0 2rem 0;
+
+  h3 {
+    margin: 0.5rem 0 1.5rem 0;
+  }
+}
+
+.skills__track {
+  display: flex;
+  animation: skills-scroll 16s linear infinite;
+  will-change: transform;
+}
+
+
+.skills__item {
+  flex: 0 0 calc(100% / 10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.75rem;
+}
+
+.skills__icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills__icon img,
+.skills__icon svg {
+  width: 54px;
+  height: 54px;
+}
+
+.skills__label {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--nfs-dark-grey);
+  white-space: nowrap;
+  margin-top: 0.3rem;
+}
+
+@keyframes skills-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Medium (--bp-medium: 700px) — 7 in view */
+@media (max-width: 700px) {
+  .skills__item {
+    flex: 0 0 calc(100% / 7);
+  }
+}
+
+/* Small (--bp-small: 400px) — 4 in view */
+@media (max-width: 400px) {
+  .skills__item {
+    flex: 0 0 calc(100% / 4);
+  }
+
+  .skills__label {
+    font-size: 0.65rem;
+  }
+
+  .skills__track {
+    animation: skills-scroll 10s linear infinite;
+  }
+}

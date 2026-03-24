@@ -14,7 +14,7 @@ export type ShowcaseCardData = {
   imageAlt: string
   title: string
   description: string
-  section: string
+  section: string | string[]
   links?: ShowcaseCardLink[]
 }
 
@@ -23,126 +23,138 @@ type ShowcaseProps = {
   cards?: ShowcaseCardData[]
 }
 
-const defaultSections = ['Branding', 'Web Design', 'Strategy']
+const defaultSections = ['Development', 'Design', 'Strategy']
 
 const defaultCards: ShowcaseCardData[] = [
-  // Branding
+  // Dev
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Brand Identity for Acme Co.',
-    title: 'Brand Identity for Acme Co.',
-    description: 'A complete brand refresh including logo, color palette, and typography guidelines for a growing tech startup.',
-    section: 'Branding',
+    image: '../images/projects_dev_futuresunvalley.png',
+    imageAlt: 'Sun Valley Microsite',
+    title: 'Sun Valley Microsite',
+    description: 'Custom website designed and developed for Sun Valley Resort to showcase capital projects. NSAA Awards Best Overall Marketing Campaign finalist for content showcased on the progress pages.',
+    section: ['Development', 'Design'],
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
-      { label: 'Case Study', href: '#', variant: 'secondary' },
+      { label: 'View the Site', href: 'https://www.futureofsunvalley.com/', variant: 'primary' },
     ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Logo Design for Solis',
-    title: 'Logo Design for Solis',
-    description: "Crafting a bold and memorable logo that reflects the company's commitment to sustainable energy solutions.",
-    section: 'Branding',
+    image: '../images/projects_dev_everfree.png',
+    imageAlt: 'EverFree Outdoors Mock Site',
+    title: 'EverFree Outdoors Mock Site',
+    description: "Full stack e-commerce outdoor gear website designed and developed with a team of 5 developers. Features full auth, advanced component structures, and multi-platform styling.",
+    section: 'Development',
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
+      { label: 'Explore the Site', href: '#', variant: 'primary' },
+      { label: 'GitHub Repo', href: 'https://github.com/anelisekathryn/EverFree-Outdoors', variant: 'secondary' },
     ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Style Guide for Northfield',
-    title: 'Style Guide for Northfield',
-    description: 'Developing a comprehensive visual style guide to ensure brand consistency across all digital and print touchpoints.',
-    section: 'Branding',
+    image: '../images/projects_dev_svtimeline.png',
+    imageAlt: 'Sun Valley Timeline Component',
+    title: 'Sun Valley Timeline Component',
+    description: 'Historical timeline component designed and developed for Sun Valley Resort to showcase the rich history of the resort and any other timeline content.',
+    section: 'Development',
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
-      { label: 'Learn More', href: '#', variant: 'secondary' },
+      { label: 'See it in Action', href: 'https://www.sunvalley.com/about/', variant: 'primary' },
     ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Rebranding Campaign',
-    title: 'Rebranding Campaign',
-    description: 'Strategic rebrand for a legacy financial services firm entering a new digital-first market segment.',
-    section: 'Branding',
-  },
-  // Web Design
-  {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'E-commerce Redesign',
-    title: 'E-commerce Redesign',
-    description: 'A complete UX overhaul for an online retailer, boosting conversions by 40% through improved navigation and checkout flow.',
-    section: 'Web Design',
+    image: '../images/projects_dev_nfs.png',
+    imageAlt: 'North Fork Solutions Site',
+    title: 'North Fork Solutions Site',
+    description: 'Like this site? I designed and built that too. Intentionally simple and clean, this is a React + TypeScript single-page site built with Vite and styled with custom vanilla CSS.',
+    section: 'Development',
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
-      { label: 'Case Study', href: '#', variant: 'secondary' },
+      { label: 'See the Code', href: 'https://github.com/anelise-nfs/nfs-site', variant: 'primary' },
+    ],
+  },
+  // Design
+  {
+    image: '../images/projects_design_btpc.png',
+    imageAlt: 'Real Estate Brand + Website',
+    title: 'Real Estate Brand + Website',
+    description: 'A complete rebrand and website design for a top producing real estate agent in Park City, Utah. Brand guidelines and logo custom design and website built in partnership with Luxury Presence.',
+    section: 'Design',
+    links: [
+      { label: 'See the Website', href: 'https://brendantrieb.com/', variant: 'primary' },
     ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Portfolio Site for Ramos Studio',
-    title: 'Portfolio Site for Ramos Studio',
-    description: 'A minimalist, animation-rich portfolio website showcasing the photography and design work of an independent creative studio.',
-    section: 'Web Design',
+    image: '../images/projects_design_sbscott.png',
+    imageAlt: 'Scott x Snowbasin',
+    title: 'SCOTT Goggles x Snowbasin',
+    description: 'Custom designed solution for a Snowbasin and SCOTT goggles partnership. Based on weather conditions, a designated goggle rec appears in the conditions report with a link to the product.',
+    section: 'Design',
     links: [
       { label: 'Visit Site', href: '#', variant: 'primary' },
     ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'SaaS Dashboard UI',
-    title: 'SaaS Dashboard UI',
-    description: 'Designing a clean, data-dense dashboard interface for a B2B analytics platform, focused on clarity and usability.',
-    section: 'Web Design',
+    image: '../images/projects_design_aquavie.png',
+    imageAlt: 'Wordpress Site Rebuild',
+    title: 'Wordpress Site Rebuild',
+    description: 'A rush relaunch of a wellness club website using a Wordpress theme paired with custom plugins. Digital brand guide and site component guide created for content authors.',
+    section: 'Design',
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
-      { label: 'Learn More', href: '#', variant: 'secondary' },
+      { label: 'View Project', href: 'https://www.aquaviewellness.com/', variant: 'primary' },
     ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Restaurant Landing Page',
-    title: 'Restaurant Landing Page',
-    description: 'A visually compelling landing page designed to drive reservations and highlight seasonal menus for an upscale dining experience.',
-    section: 'Web Design',
+    image: '../images/projects_design_westgate.png',
+    imageAlt: 'Hotel Homepage Redesign',
+    title: 'Hotel Homepage Redesign',
+    description: 'A complete redesign and development of all hotel home pages across a portfolio of properties with strategic placement of booking bar and invitation to explore additional properties.',
+    section: 'Design',
   },
   // Strategy
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Go-to-Market Plan',
-    title: 'Go-to-Market Plan',
-    description: 'Developing a full GTM strategy for a SaaS startup launching into a competitive enterprise market, including positioning and channel mix.',
+    image: '../public/images/projects_strategy_devsprints.png',
+    imageAlt: 'Asana Development Planning',
+    title: 'Asana Development Planning',
+    description: 'Created and managed an asana board that tracked and delivered hundreds of dev projects across dozens of sprints and releases for 10 websites across a business portfolio.',
+    section: 'Strategy',
+  },
+  {
+    image: '../public/images/projects_strategy_events.png',
+    imageAlt: 'Events Communication + Display',
+    title: 'Events Communication + Display',
+    description: 'Update the visual and technical display of events across several hotels in a business portfolio to align communication, streamline processes, and eliminate duplicate information and improve SEO.',
+    section: 'Strategy',
+  },
+  {
+    image: '../public/images/projects_strategy_svsb.png',
+    imageAlt: 'Complete Site Redesign + Rebuild',
+    title: 'Complete Site Redesign + Rebuild',
+    description: 'Coordinated and advised in the complete redesign and rebuild of two ski resort websites, working with several designers, developers, content authors, and marketing teams.',
     section: 'Strategy',
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
+      { label: 'Sun Valley', href: 'https://www.sunvalley.com/', variant: 'primary' },
+      { label: 'Snowbasin', href: 'https://saltlake.littleamerica.com/', variant: 'secondary' },
     ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Content Strategy Audit',
-    title: 'Content Strategy Audit',
-    description: 'A comprehensive audit and rebuild of a content strategy to align with SEO goals and audience growth targets.',
+    image: '../public/images/projects_strategy_gala.png',
+    imageAlt: 'Complete Site Redesign + Rebuild',
+    title: 'Complete Site Redesign + Rebuild',
+    description: 'Coordinated and advised in the complete redesign and rebuild of two hotel websites, working with several designers, developers, content authors, and marketing teams.',
     section: 'Strategy',
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
-      { label: 'Case Study', href: '#', variant: 'secondary' },
+      { label: 'Grand America', href: 'https://www.grandamerica.com/', variant: 'primary' },
+      { label: 'Little America', href: 'https://saltlake.littleamerica.com/', variant: 'secondary' },
     ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Digital Transformation Roadmap',
-    title: 'Digital Transformation Roadmap',
-    description: 'Guiding a mid-sized retail brand through a structured digital transformation, from ecommerce migration to omnichannel activation.',
+    image: '../public/images/projects_strategy_mtbfw.png',
+    imageAlt: 'Mt. Bachelor Closing Weekend',
+    title: 'Mt. Bachelor x 10 Barrel Activation',
+    description: 'A closing weekend experience in partnership with 10 Barrel and Mt. Bachelor where both mountain biking and skiing were open for an entire 3-day weekend, featuring several events and brand activations.',
     section: 'Strategy',
-    links: [
-      { label: 'Learn More', href: '#', variant: 'primary' },
-    ],
   },
   {
-    image: 'https://placehold.co/350x200',
-    imageAlt: 'Social Media Strategy',
-    title: 'Social Media Strategy',
-    description: 'Building a cohesive social media strategy for a consumer goods brand, resulting in a 3x increase in organic reach within six months.',
+    image: '../public/images/projects_strategy_wwpc.png',
+    imageAlt: 'Trail Sign + Wayfinding',
+    title: 'Trail Sign + Wayfinding',
+    description: 'Update the mountain bike trail sign and wayfinding experience at Woodward Park City to promote a progression-based trail system and improve bike experience.',
     section: 'Strategy',
   },
 ]
@@ -203,7 +215,11 @@ function Showcase({ sections = defaultSections, cards = defaultCards }: Showcase
   const filteredCards =
     activeSection === 'all'
       ? cards
-      : cards.filter(card => card.section.toLowerCase() === activeSection)
+      : cards.filter(card =>
+          (Array.isArray(card.section) ? card.section : [card.section]).some(
+            s => s.toLowerCase() === activeSection
+          )
+        )
 
   const allTabs = ['All', ...sections]
 
@@ -240,12 +256,12 @@ function Showcase({ sections = defaultSections, cards = defaultCards }: Showcase
             </div>
             <div className="showcase__card-body">
               <h3 className="showcase__card-title">{card.title}</h3>
-              <p className="showcase__card-description">{card.description}</p>
+              <p className={`showcase__card-description${!card.links?.length ? ' showcase__card-description--no-links' : ''}`}>{card.description}</p>
             </div>
             {card.links && card.links.length > 0 && (
               <div className="showcase__card-links">
                 {card.links.slice(0, 2).map((link, i) => (
-                  <Button key={i} variant={link.variant ?? 'primary'} href={link.href}>
+                  <Button key={i} variant={link.variant ?? 'primary'} href={link.href} target="_blank" rel="noopener noreferrer">
                     {link.label}
                   </Button>
                 ))}

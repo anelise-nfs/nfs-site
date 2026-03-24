@@ -30,6 +30,10 @@ function About() {
         <p>
         Whether it's launching a brand new company, refreshing a brand, or collaborating with a large dev team, I bring the expertise to transform your vision into reality and guide projects from concept to completion.
         </p>
+        <blockquote className="about-quote">
+          "Anelise brings a dual fluency that is hard to find; she thinks like a marketer and builds like a developer. That combination means she's not just executing a design, she's asking the right questions, and those instincts show up in everything she delivers."
+          <cite className="about-quote__person">— Sarah Miller, Director of Marketing Technology at Grand America Hotels & Resorts</cite>
+        </blockquote>
       </ImageText>
       <FourSquareInfo
         items={[
@@ -51,7 +55,7 @@ function About() {
           {
             icon: <CircleStackIcon />,
             title: 'Intelligent Automation',
-            text: 'AI solutions implemented with purpose and expertise. Thoughtful automation that elevates performance and efficiency.',
+            text: 'AI solutions implemented with purpose. Thoughtful automation that drives performance.',
           },
         ]}
       />

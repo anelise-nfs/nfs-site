@@ -55,7 +55,7 @@ function App() {
           className="giphy-embed"
           allowFullScreen
         />
-        <Button variant="primary" href="mailto:anelise@northforksolutions.com?subject=this site is for ants">file a complaint</Button>
+        <Button variant="primary" href="mailto:hello@northforksolutions.com?subject=this site is for ants">file a complaint</Button>
       </div>
 
       <div className="site-wrapper">
