@@ -6,7 +6,9 @@ Single-page marketing website for North Fork Solutions, built with React + TypeS
 
 - **React 19** — component-based UI
 - **TypeScript** — type-safe throughout
-- **Vite** — dev server and build tooling
+- **Vite 6** — dev server and build tooling
+- **vite-react-ssg** — static site generation (pre-renders HTML at build time)
+- **react-router-dom** — required by vite-react-ssg (single route at `/`)
 - **Vanilla CSS** — per-component CSS files, no UI library
 - **Heroicons** — SVG icon set (`@heroicons/react`)
 - **Netlify** — hosting + contact form handling (via `data-netlify`)
@@ -45,6 +47,8 @@ Defined in `src/index.css`:
 | `--nfs-light-grey` | `rgba(33, 53, 71, 0.65)` |
 
 ## Dev
+
+Requires Node 20+.
 
 ```bash
 npm install
