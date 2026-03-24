@@ -13,10 +13,10 @@ function Work() {
       >
         <h1>Successful Projects</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+          Throughout my career I have built brands, developed and supported multi-faceted marketing campaigns, and designed and coded custom web applications and solutions for a variety of companies. Here's a look at some recent work that showcases the design, development, and strategy work I love to do.
+        </p>
+        <p className="work-intro__disclaimer">
+          Please note that this portfolio includes past work and independent projects. Projects shown do not necessarily represent current clients.
         </p>
       </div>
       <Showcase />

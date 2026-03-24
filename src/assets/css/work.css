@@ -9,3 +9,9 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.work-intro__disclaimer {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--nfs-dark-grey);
+}

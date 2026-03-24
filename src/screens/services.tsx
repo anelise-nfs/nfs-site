@@ -52,7 +52,7 @@ function Services () {
       >
         <h2>Visual Identity with Purpose</h2>
         <p>
-          Creating visual systems with intention—where every color, typeface, and interface element serves a purpose. With over 15 years of experience in design and branding, I understand how to build cohesive visual identities that work across every touchpoint. If you like meticulous, intentional design, you've come to the right place (because, yes, there is actually a big difference in 2rem vs 2.1 rem font size).
+          Creating visual systems with intention—where every color, typeface, and interface element serves a purpose. With over 15 years of experience in design and brand strategy, I understand how to build cohesive visual identities that work across every touchpoint. If you like meticulous, intentional design, you've come to the right place (because, yes, there is actually a big difference in 2rem vs 2.1rem font size).
         </p>
         <ul>
           <li>Brand identity and logo design</li>
