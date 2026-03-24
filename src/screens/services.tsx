@@ -23,7 +23,7 @@ function Services () {
       </div>
       <ImageText
         variant="image-right"
-        imageSrc="../public/images/services-dev.jpg"
+        imageSrc="../images/services-dev.jpg"
         imageAlt="Placeholder image"
         // buttonLabel="Learn More"
         // buttonHref="#"
@@ -44,7 +44,7 @@ function Services () {
       </ImageText>
       <ImageText
         variant="image-left"
-        imageSrc="../public/images/services-design_2.jpg"
+        imageSrc="../images/services-design_2.jpg"
         imageAlt="Placeholder image"
         // buttonLabel="Learn More"
         // buttonHref="#"
@@ -64,7 +64,7 @@ function Services () {
       </ImageText>
       <ImageText
         variant="image-right"
-        imageSrc="../public/images/services-strategy.jpg"
+        imageSrc="../images/services-strategy.jpg"
         imageAlt="Placeholder image"
         // buttonLabel="Learn More"
         // buttonHref="#"

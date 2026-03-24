@@ -108,21 +108,21 @@ const defaultCards: ShowcaseCardData[] = [
   },
   // Strategy
   {
-    image: '../public/images/projects_strategy_devsprints.png',
+    image: '../images/projects_strategy_devsprints.png',
     imageAlt: 'Asana Development Planning',
     title: 'Asana Development Planning',
     description: 'Created and managed an asana board that tracked and delivered hundreds of dev projects across dozens of sprints and releases for 10 websites across a business portfolio.',
     section: 'Strategy',
   },
   {
-    image: '../public/images/projects_strategy_events.png',
+    image: '../images/projects_strategy_events.png',
     imageAlt: 'Events Communication + Display',
     title: 'Events Communication + Display',
     description: 'Update the visual and technical display of events across several hotels in a business portfolio to align communication, streamline processes, and eliminate duplicate information and improve SEO.',
     section: 'Strategy',
   },
   {
-    image: '../public/images/projects_strategy_svsb.png',
+    image: '../images/projects_strategy_svsb.png',
     imageAlt: 'Complete Site Redesign + Rebuild',
     title: 'Complete Site Redesign + Rebuild',
     description: 'Coordinated and advised in the complete redesign and rebuild of two ski resort websites, working with several designers, developers, content authors, and marketing teams.',
@@ -133,7 +133,7 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: '../public/images/projects_strategy_gala.png',
+    image: '../images/projects_strategy_gala.png',
     imageAlt: 'Complete Site Redesign + Rebuild',
     title: 'Complete Site Redesign + Rebuild',
     description: 'Coordinated and advised in the complete redesign and rebuild of two hotel websites, working with several designers, developers, content authors, and marketing teams.',
@@ -144,14 +144,14 @@ const defaultCards: ShowcaseCardData[] = [
     ],
   },
   {
-    image: '../public/images/projects_strategy_mtbfw.png',
+    image: '../images/projects_strategy_mtbfw.png',
     imageAlt: 'Mt. Bachelor Closing Weekend',
     title: 'Mt. Bachelor x 10 Barrel Activation',
     description: 'A closing weekend experience in partnership with 10 Barrel and Mt. Bachelor where both mountain biking and skiing were open for an entire 3-day weekend, featuring several events and brand activations.',
     section: 'Strategy',
   },
   {
-    image: '../public/images/projects_strategy_wwpc.png',
+    image: '../images/projects_strategy_wwpc.png',
     imageAlt: 'Trail Sign + Wayfinding',
     title: 'Trail Sign + Wayfinding',
     description: 'Update the mountain bike trail sign and wayfinding experience at Woodward Park City to promote a progression-based trail system and improve bike experience.',
