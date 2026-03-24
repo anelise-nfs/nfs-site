@@ -55,6 +55,10 @@
   .skills__item {
     flex: 0 0 calc(100% / 7);
   }
+
+  .skills__track {
+    animation: skills-scroll 8s linear infinite;
+  }
 }
 
 /* Small (--bp-small: 400px) — 4 in view */
@@ -68,6 +72,6 @@
   }
 
   .skills__track {
-    animation: skills-scroll 10s linear infinite;
+    animation: skills-scroll 8s linear infinite;
   }
 }
