@@ -29,7 +29,7 @@ const defaultItems: SkillItem[] = [
 function Skills({ items = defaultItems }: SkillsProps) {
   return (
     <div className="skills">
-      <h3>Technologies + Platforms</h3>
+      <h3>Technical Toolkit</h3>
       <div className="skills__track">
         {[...items, ...items].map((item, index) => (
           <div

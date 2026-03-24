@@ -14,10 +14,7 @@ function Services () {
       >
         <h1>Expertise</h1>
         <p>
-          North Fork Solutions offers comprehensive digital services designed to help businesses grow. From brand strategy to web development, from marketing plans to choosing the right systems and software, expert knowledge is available at every stage of the journey.
-        </p>
-        <p>
-          My approach to every project is collaborative and transparent, enhanced by intelligent automation that accelerates delivery without sacrificing quality. AI is leveraged strategically — not as a shortcut, but as a powerful tool guided by expertise and precision. Through thoughtful prompts and a deep understanding of the logic behind each request, North Fork Solutions delivers custom-crafted solutions, not just a copy paste from an AI tool. This process creates efficiency that allows faster timelines without sacrificing the quality of the end-product.
+          North Fork Solutions offers comprehensive digital services designed to help businesses grow. From brand strategy to web development, from marketing plans to choosing the right systems and software, Anelise brings expert knowledge to every stage of the process. The approach to every project starts with a deep understanding of the heart of the problem. My process is creative, collaborative, and transparent. AI and automation will be used to speed up delivery, but never at the expense of quality or individuality.
         </p>
         <p>
           Looking to build something big? Don't worry, it's not just me behind the scenes. I have a large network of talented designers, back-end developers, content creators, and many other industry experts that are ready to help deliver your dreams to reality.
