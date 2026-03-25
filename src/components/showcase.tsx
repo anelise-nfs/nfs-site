@@ -120,19 +120,19 @@ const defaultCards: ShowcaseCardData[] = [
   },
   {
     image: '../images/projects_strategy_svsb.png',
-    imageAlt: 'Complete Site Redesign + Rebuild',
-    title: 'Complete Site Redesign + Rebuild',
+    imageAlt: 'Site Redesign + Rebuild',
+    title: 'Site Redesign + Rebuild',
     description: 'Coordinated and advised in the complete redesign and rebuild of two ski resort websites, working with several designers, developers, content authors, and marketing teams.',
     section: 'Strategy',
     links: [
       { label: 'Sun Valley', href: 'https://www.sunvalley.com/', variant: 'primary' },
-      { label: 'Snowbasin', href: 'https://saltlake.littleamerica.com/', variant: 'secondary' },
+      { label: 'Snowbasin', href: 'https://www.snowbasin.com/', variant: 'secondary' },
     ],
   },
   {
     image: '../images/projects_strategy_gala.png',
-    imageAlt: 'Complete Site Redesign + Rebuild',
-    title: 'Complete Site Redesign + Rebuild',
+    imageAlt: 'Site Redesign + Rebuild',
+    title: 'Site Redesign + Rebuild',
     description: 'Coordinated and advised in the complete redesign and rebuild of two hotel websites, working with several designers, developers, content authors, and marketing teams.',
     section: 'Strategy',
     links: [
