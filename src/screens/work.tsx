@@ -11,7 +11,7 @@ function Work() {
         ref={ref}
         className={`work-intro${visible ? ' work-intro--visible' : ''}`}
       >
-        <h1>Successful Projects</h1>
+        <h1>Projects</h1>
         <p>
           Throughout my career I have built brands, developed and supported multi-faceted marketing campaigns, and designed and coded custom web applications and solutions for a variety of companies. Here's a look at some recent work that showcases the design, development, and strategy work I love to do.
         </p>

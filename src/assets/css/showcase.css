@@ -47,7 +47,7 @@
     transform 0.5s ease calc(var(--card-index, 0) * 70ms);
 }
 
-/* Hover — override delay so it feels instant */
+/* Hover — override delay */
 .showcase__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -120,7 +120,7 @@
 }
 
 /* Remove card entrance animation on small screens */
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .showcase__card {
     opacity: 1;
     transform: none;
@@ -131,12 +131,35 @@
   }
 }
 
+@media (max-width: 1180px) {
+  .showcase__card-description {
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+  }
+
+  .showcase__card-description--no-links {
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+  }
+}
+
 /* 1 column at small (600px) */
 @media (max-width: 600px) {
   .showcase__grid {
     grid-template-columns: 1fr;
     max-width: 400px;
   }
+
+  .showcase__card-description {
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+  }
+
+  .showcase__card-description--no-links {
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+  }
+
 
   /* Scrollable pill strip */
   .showcase__tabs {
